@@ -72,61 +72,61 @@
   --social-shadow-hover: 0 12px 28px rgba(0, 0, 0, 0.24);
   --social-ink: var(--ink);
 }
-body.template-personal-brand-warm-stay {
+body.template-personal-brand-lime-ledger {
 
   color-scheme: light;
-  --accent: #ff385c;
+  --accent: #9fe870;
   --action-bg: #ffffff;
-  --action-border: #ebebeb;
-  --ambient: linear-gradient(180deg, #fff7f4 0 240px, #ffffff 240px 100%);
-  --avatar-size: 118px;
-  --bio-ink: #4d4d4d;
+  --action-border: #d9e5d2;
+  --ambient: linear-gradient(180deg, #e8ebe6 0 260px, #ffffff 260px 100%);
+  --avatar-size: 112px;
+  --bio-ink: #454745;
   --canvas: #ffffff;
-  --card-bg: #ffffff;
-  --card-border: #ebebeb;
-  --card-shadow: rgba(34, 34, 34, 0.08) 0 22px 56px;
-  --cta-bg: #ff6f86;
-  --cta-bg-hover: #ff8194;
-  --cta-border: #d70452;
-  --cta-ink: #222222;
-  --headline-size: 58px;
-  --headline-size-mobile: 36px;
-  --headline-weight: 700;
-  --ink: #222222;
+  --card-bg: #f4faef;
+  --card-border: #d9e5d2;
+  --card-shadow: rgba(14, 15, 12, 0.1) 0 24px 62px;
+  --cta-bg: #9fe870;
+  --cta-bg-hover: #cdffad;
+  --cta-border: #9fe870;
+  --cta-ink: #0e0f0c;
+  --headline-size: 68px;
+  --headline-size-mobile: 40px;
+  --headline-weight: 900;
+  --ink: #0e0f0c;
   --link-bg: #ffffff;
-  --link-bg-hover: #f7f7f7;
-  --link-border: #dddddd;
+  --link-bg-hover: #e2f6d5;
+  --link-border: #d9e5d2;
   --link-gap: 10px;
-  --link-icon-bg: #fff2f5;
-  --link-icon-bg-hover: #ff385c;
-  --link-icon-ink-hover: #ffffff;
-  --link-meta: #6a6a6a;
-  --link-shadow-hover: 0 14px 32px rgba(255, 56, 92, 0.14);
-  --meta-bg: #fff2f5;
-  --meta-border: #ffd3dc;
-  --muted: #6a6a6a;
+  --link-icon-bg: #e2f6d5;
+  --link-icon-bg-hover: #9fe870;
+  --link-icon-ink-hover: #0e0f0c;
+  --link-meta: #454745;
+  --link-shadow-hover: 0 14px 30px rgba(159, 232, 112, 0.24);
+  --meta-bg: #e2f6d5;
+  --meta-border: #c5edab;
+  --muted: #454745;
   --panel-bg: #ffffff;
-  --panel-border: #ebebeb;
+  --panel-border: #d9e5d2;
   --panel-padding: 18px;
   --profile-bg: #ffffff;
-  --profile-border: #ebebeb;
-  --profile-button-outset: 26px;
-  --profile-padding: 26px;
+  --profile-border: #d9e5d2;
+  --profile-button-outset: 20px;
+  --profile-padding: 22px 20px;
   --radius-action: 999px;
-  --radius-avatar: 999px;
-  --radius-card: 16px;
+  --radius-avatar: 24px;
+  --radius-card: 18px;
   --radius-panel: 24px;
-  --section-gap: 16px;
+  --section-gap: 15px;
   --shell-padding-block: 44px 34px;
-  --shell-width: 760px;
-  --surface: #ffffff;
+  --shell-width: 780px;
+  --surface: #e8ebe6;
   --social-bg: #ffffff;
-  --social-border: #dddddd;
-  --social-hover-bg: #ff385c;
-  --social-hover-border: #ff385c;
-  --social-hover-ink: #ffffff;
-  --social-ink: #222222;
-  --surface-2: #f7f7f7;
+  --social-border: #d9e5d2;
+  --social-hover-bg: #9fe870;
+  --social-hover-border: #9fe870;
+  --social-hover-ink: #0e0f0c;
+  --social-ink: #0e0f0c;
+  --surface-2: #e2f6d5;
   --cta-ink-hover: var(--cta-ink);
   --cta-icon-bg: color-mix(in srgb, var(--cta-ink), transparent 86%);
   --cta-icon-border: color-mix(in srgb, var(--cta-ink), transparent 72%);
@@ -308,12 +308,19 @@ footer span,
 }
 h1 {
   font-family: var(--display-font);
-  font-size: var(--headline-size);
+  font-size: min(var(--headline-size), 44px);
   font-weight: var(--headline-weight);
   letter-spacing: 0;
-  line-height: 1.02;
+  line-height: 1.08;
   margin: 0;
   overflow-wrap: anywhere;
+  text-wrap: balance;
+}
+h1.headline-medium {
+  font-size: min(var(--headline-size), 40px);
+}
+h1.headline-long {
+  font-size: min(var(--headline-size), 34px);
 }
 .bio {
   color: var(--bio-ink, #d0d6e0);
@@ -841,7 +848,14 @@ footer a:hover {
     width: min(calc(100% - 24px), var(--shell-width));
   }
   h1 {
-    font-size: var(--headline-size-mobile);
+    font-size: min(var(--headline-size-mobile), 30px);
+    line-height: 1.1;
+  }
+  h1.headline-medium {
+    font-size: min(var(--headline-size-mobile), 28px);
+  }
+  h1.headline-long {
+    font-size: min(var(--headline-size-mobile), 25px);
   }
   .profile-card {
     padding: max(18px, calc(var(--card-padding) - 8px));
